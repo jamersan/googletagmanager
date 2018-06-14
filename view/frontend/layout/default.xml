@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+          <block class="Jamersan\GoogleTagManager\Block\GtmCode" name="jamersan_gtm_iframe" as="jamersan_gtm_iframe" template="Jamersan_GoogleTagManager::iframe.phtml" />
+          <block class="Jamersan\GoogleTagManager\Block\GtmCode" template="Jamersan_GoogleTagManager::js.phtml" />
+        </referenceContainer>
+        <referenceBlock name="head.additional">
+            <block class="Jamersan\GoogleTagManager\Block\DataLayer" name="jamersan_gtm_datalayer" as="jamersan_gtm_datalayer" template="Jamersan_GoogleTagManager::data_layer.phtml">
+                <arguments>
+                    <argument name="show_ecommerce_currency_code" xsi:type="boolean">true</argument>
+                </arguments>
+            </block>
+            <block class="Jamersan\GoogleTagManager\Block\GtmCode" name="jamersan_gtm_js" as="jamersan_gtm_js" template="Jamersan_GoogleTagManager::gtm_js.phtml" />
+        </referenceBlock>
+    </body>
+</page>

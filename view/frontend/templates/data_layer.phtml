@@ -1,0 +1,13 @@
+<?php
+/**
+ *
+ * Copyright (c) 2019. Jamersan, LLC
+ * Author: William French
+ * https://www.jamersan.com | william.french@jamersan.com
+ *
+ */
+?>
+<?php /** @var $block \Jamersan\GoogleTagManager\Block\DataLayer **/ ?>
+<script type="text/javascript">
+window.<?php echo $block->getDataLayerName() ?> = window.<?php echo $block->getDataLayerName() ?> || [];
+<?php echo $block->getDataLayer(); ?></script>

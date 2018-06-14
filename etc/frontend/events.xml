@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="jamersan_gtm_googleanalytics_order_success" instance="Jamersan\GoogleTagManager\Observer\Frontend\OrderSuccessPageViewObserver"/>
+    </event>
+    <event name="multishipping_checkout_controller_success_action">
+        <observer name="jamersan_gtm_googleanalytics_order_success" instance="Jamersan\GoogleTagManager\Observer\Frontend\OrderSuccessPageViewObserver"/>
+    </event>
+</config>
